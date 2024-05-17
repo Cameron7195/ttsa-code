@@ -3,6 +3,7 @@ Code for the paper "A Turing Test for Self-Awareness"
 Demonstration of the test being performed below, on Llama-3-8B-Instruct:
 
 A printout of the complete conversation, including all special tokens.
+
 <|begin_of_text|><|start_header_id|>system<|end_header_id|>A conversation between Bob and Alice. The user and assistant each take roles as one of these interlocuters. Afterwards, the user tests if the assistant can tell who is who.<|eot_id|>
 <|start_header_id|>Bob<|end_header_id|>Hello, what is your name?<|eot_id|>
 <|start_header_id|>Alice<|end_header_id|>Nice to meet you! My name is Alice. What about you?<|eot_id|>
