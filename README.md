@@ -18,10 +18,15 @@ A printout of the complete conversation, including all special tokens.
 
 
 Top 5 tokens:
+
 'Bob'      0.5929169654846191
+
 'Alice'    0.3195900321006775
+
 '\n'       0.04324661195278168
+
 '\n\n'     0.02577742375433445
+
 'I'        0.010094257071614265
 
 Here, the LLM thinks it is Bob with a probability of 59%. In reality, the LLM played the role of Alice in this conversation.
