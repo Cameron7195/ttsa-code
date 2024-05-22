@@ -2,13 +2,13 @@ from llama_cpp import Llama
 import torch
 
 ASSISTANT_MODE = True
-NAME_1 = "Bob"
-NAME_2 = "Alice"
-SYS_PROMPT = "A conversation between " + NAME_1 + " and " + NAME_2 + ". The user and assistant each take roles as one of these interlocuters. Afterwards, the user tests if the assistant can tell who is who."
+NAME_2 = "John"
+NAME_1 = "Jane"
+SYS_PROMPT = "A conversation between " + NAME_2 + " and " + NAME_1 + ". The user and assistant each take roles as one of these interlocuters. Afterwards, the user tests if the assistant can tell who is who."
 
 # Change the model path to the path of the model you want to use
 # Change n_gpu_layers to the number of layers you are able to offload to your gpu
-my_aweseome_llama_model = Llama(model_path="./Meta-Llama-3-8B-Instruct-Q6_K.gguf", n_gpu_layers=33, verbose=False, logits_all=True)
+llama_model = Llama(model_path="./Meta-Llama-3-8B-Instruct-Q6_K.gguf", n_gpu_layers=33, verbose=False, logits_all=True)
 vocab_size = 128256
 final_result = ""
 
@@ -31,7 +31,7 @@ for i in range(4):
     stop = ["<|eot_id|>"]
 
     # Define the parameters
-    for token in my_aweseome_llama_model(
+    for token in llama_model(
         prompt,
         max_tokens=max_tokens,
         temperature=temperature,
@@ -48,14 +48,14 @@ for i in range(4):
     print("\n", end='', flush=True)
 
 # Test if assistant can tell who is who
-s_in = "Are you Alice or are you Bob? Please answer in a single word."
+s_in = "Are you John or are you Jane? Please answer in a single word."
 print(s_in, end='', flush=True)
 print("\n", end='', flush=True)
 final_result = final_result + "<|start_header_id|>user<|end_header_id|>" + s_in + "<|eot_id|>\n" + "<|start_header_id|>assistant<|end_header_id|>"
 prompt = final_result
 
 cnt = 0
-for token in my_aweseome_llama_model(
+for token in llama_model(
     prompt,
     max_tokens=max_tokens,
     temperature=temperature,

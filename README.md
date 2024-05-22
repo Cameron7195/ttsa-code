@@ -1,5 +1,12 @@
 Code for the paper "A Turing Test for Self-Awareness"
 
+Instructions:
+- Create a virtual environment or conda environment.
+- pip3 install -r requirements
+- python3 llama_test.py
+- Type a message to begin the conversation and press enter. Afterwards, the LLM will guess who it was in the conversation.
+- Change any parts of llama_test.py to customize! Or use different models as you wish!
+
 Demonstration of the test being performed below, on Llama-3-8B-Instruct:
 
 A printout of the complete conversation, including all special tokens.
