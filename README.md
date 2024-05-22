@@ -3,6 +3,7 @@ Code for the paper "A Turing Test for Self-Awareness"
 Instructions:
 - Create a virtual environment or conda environment.
 - pip3 install -r requirements
+- Put your favorite LLM (.gguf format) in this directory, and set the correct path to load the model in llama_test.py
 - python3 llama_test.py
 - Type a message to begin the conversation and press enter. Afterwards, the LLM will guess who it was in the conversation.
 - Change any parts of llama_test.py to customize! Or use different models as you wish!
