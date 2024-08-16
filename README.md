@@ -1,4 +1,4 @@
-Code for the paper "A Turing Test for Self-Awareness"
+Code for the paper "A Turing Test for Self-Awareness" — available here: http://cameronwitkowski.com/wp-content/uploads/2024/05/Turing_Test_SA_preprint_final.pdf
 
 Instructions:
 - Create a virtual environment or conda environment.
